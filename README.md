@@ -1,6 +1,7 @@
-# WebP Converter CLI
+# WebP CLI
 
-A command-line interface for converting images to WebP format.
+A command-line interface for converting images to WebP format. Easily convert
+your JPG, PNG, GIF, and other images to the more efficient WebP format.
 
 ## Features
 
@@ -13,11 +14,38 @@ A command-line interface for converting images to WebP format.
 
 ## Installation
 
+### Using npx (no installation required)
+
+You can run the CLI directly without installing it using npx:
+
+```bash
+npx webp-image-cli convert <options>
+```
+
+### Global Installation
+
+To install the CLI globally:
+
+```bash
+# Install globally from npm
+npm install -g webp-image-cli
+
+# Now you can use it anywhere
+webp-cli convert <options>
+```
+
 ### Local Development
 
 To build and use the CLI during development:
 
 ```bash
+# Clone the repository
+git clone https://github.com/yourusername/webp-cli.git
+cd webp-cli
+
+# Install dependencies
+npm install
+
 # Build the CLI
 npm run cli:build
 
@@ -28,44 +56,32 @@ npm run cli:start convert <options>
 npm run cli convert <options>
 ```
 
-### Global Installation
-
-To install the CLI globally:
-
-```bash
-# Install globally from the project directory
-npm install -g .
-
-# Now you can use it anywhere
-webp-converter convert <options>
-```
-
 ## Usage
 
 ```bash
 # Basic usage - convert a single file
-webp-converter convert input.jpg
+webp-cli convert input.jpg
 
 # Convert all images in a directory
-webp-converter convert images/
+webp-cli convert images/
 
 # Convert all images in a directory and its subdirectories
-webp-converter convert images/ -r
+webp-cli convert images/ -r
 
 # Convert with custom quality
-webp-converter convert input.jpg -q 90
+webp-cli convert input.jpg -q 90
 
 # Resize image
-webp-converter convert input.jpg -w 800 -h 600
+webp-cli convert input.jpg -w 800 -h 600
 
 # Convert multiple files with a glob pattern
-webp-converter convert "images/*.jpg"
+webp-cli convert "images/*.jpg"
 
 # Output to a different directory
-webp-converter convert "images/*.jpg" -o converted/
+webp-cli convert "images/*.jpg" -o converted/
 
 # Force overwriting existing files
-webp-converter convert input.jpg --overwrite
+webp-cli convert input.jpg --overwrite
 ```
 
 ## Options
@@ -83,7 +99,7 @@ webp-converter convert input.jpg --overwrite
 ### Convert a single image
 
 ```bash
-webp-converter convert cat.jpg
+webp-cli convert cat.jpg
 ```
 
 This will create `cat.webp` in the same directory.
@@ -91,7 +107,7 @@ This will create `cat.webp` in the same directory.
 ### Convert all images in a directory
 
 ```bash
-webp-converter convert photos/
+webp-cli convert photos/
 ```
 
 This will convert all image files in the `photos` directory to WebP format and
@@ -100,7 +116,7 @@ save them in the same directory.
 ### Convert all images in a directory and its subdirectories
 
 ```bash
-webp-converter convert photos/ -r
+webp-cli convert photos/ -r
 ```
 
 This will recursively find and convert all images in the `photos` directory and
@@ -109,7 +125,7 @@ all of its subdirectories.
 ### Convert multiple images
 
 ```bash
-webp-converter convert "photos/*.jpg" -o webp-photos/
+webp-cli convert "photos/*.jpg" -o webp-photos/
 ```
 
 This will convert all JPG files in the `photos` directory and save them to the
@@ -118,11 +134,19 @@ This will convert all JPG files in the `photos` directory and save them to the
 ### Resize images during conversion
 
 ```bash
-webp-converter convert image.png -w 1200
+webp-cli convert image.png -w 1200
 ```
 
 This will convert `image.png` to WebP and resize it to 1200px width while
 maintaining the aspect ratio.
+
+### Using with npx
+
+```bash
+npx webp-image-cli convert "images/*.jpg" -q 85 -o webp/
+```
+
+This runs the CLI directly using npx without requiring installation.
 
 ## Notes
 
@@ -140,3 +164,27 @@ this:
 
 If you need different settings for different images, convert them individually
 or use more specific glob patterns.
+
+## Contributing
+
+Contributions are welcome! Here's how you can contribute:
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+Please make sure to update tests as appropriate.
+
+## License
+
+This project is licensed under the ISC License - see the LICENSE file for
+details.
+
+## Acknowledgements
+
+- [sharp](https://sharp.pixelplumbing.com/) - High performance Node.js image
+  processing
+- [commander](https://github.com/tj/commander.js/) - The complete solution for
+  Node.js command-line interfaces
