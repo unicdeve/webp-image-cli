@@ -19,7 +19,7 @@ interface ConversionOptions {
 export async function convertToWebP(
 	inputPath: string,
 	outputPath?: string,
-	options: ConversionOptions = { quality: 80 },
+	options: ConversionOptions = { quality: 100 }
 ): Promise<{ outputPath: string; size: number }> {
 	try {
 		// Validate input file exists
@@ -77,7 +77,7 @@ export async function convertToWebP(
  */
 export function calculateSizeChange(
 	originalSize: number,
-	convertedSize: number,
+	convertedSize: number
 ): string {
 	const percentageChange =
 		((convertedSize - originalSize) / originalSize) * 100;
