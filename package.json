@@ -1,0 +1,36 @@
+{
+	"name": "webp-converter",
+	"version": "1.0.0",
+	"description": "A CLI to help you convert images to WebP format",
+	"main": "index.ts",
+	"bin": {
+		"webp-converter": "./build/index.js"
+	},
+	"scripts": {
+		"cli:build": "tsc",
+		"cli:start": "node ./build/index.js",
+		"cli": "npm run cli:build && npm run cli:start",
+		"cli:global": "npm run cli:build && npm install -g ."
+	},
+	"keywords": [
+		"webp",
+		"images",
+		"png",
+		"jpeg",
+		"gif",
+		"web"
+	],
+	"author": "Taiwo Ogunola",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/fs-extra": "^11.0.4",
+		"typescript": "^5.8.2"
+	},
+	"dependencies": {
+		"commander": "^13.1.0",
+		"fs-extra": "^11.3.0",
+		"glob": "^11.0.1",
+		"sharp": "^0.33.5",
+		"yargs-parser": "^21.1.1"
+	}
+}
