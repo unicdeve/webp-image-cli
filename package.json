@@ -1,10 +1,14 @@
 {
 	"name": "webp-image-cli",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "A CLI to help you convert images to WebP format",
 	"main": "build/index.js",
 	"bin": {
 		"webp-image-cli": "./build/index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/unicdeve/webp-image-cli"
 	},
 	"files": [
 		"build/",
@@ -38,8 +42,7 @@
 		"commander": "^13.1.0",
 		"fs-extra": "^11.3.0",
 		"glob": "^11.0.1",
-		"sharp": "^0.33.5",
-		"yargs-parser": "^21.1.1"
+		"sharp": "^0.33.5"
 	},
 	"engines": {
 		"node": ">=14.0.0"

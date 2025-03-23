@@ -16,7 +16,7 @@ const program = new Command();
 program
 	.name('webp-image-cli')
 	.description('Convert images to WebP format from the command line')
-	.version('1.0.0');
+	.version('1.0.2');
 
 // Convert command
 program
