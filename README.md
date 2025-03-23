@@ -31,7 +31,7 @@ To install the CLI globally:
 npm install -g webp-image-cli
 
 # Now you can use it anywhere
-webp-cli convert <options>
+webp-image-cli convert <options>
 ```
 
 ### Local Development
@@ -40,8 +40,8 @@ To build and use the CLI during development:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/webp-cli.git
-cd webp-cli
+git clone git@github.com:unicdeve/webp-image-cli.git
+cd webp-image-cli
 
 # Install dependencies
 npm install
@@ -60,28 +60,28 @@ npm run cli convert <options>
 
 ```bash
 # Basic usage - convert a single file
-webp-cli convert input.jpg
+webp-image-cli convert input.jpg
 
 # Convert all images in a directory
-webp-cli convert images/
+webp-image-cli convert images/
 
 # Convert all images in a directory and its subdirectories
-webp-cli convert images/ -r
+webp-image-cli convert images/ -r
 
 # Convert with custom quality
-webp-cli convert input.jpg -q 90
+webp-image-cli convert input.jpg -q 90
 
 # Resize image
-webp-cli convert input.jpg -w 800 -h 600
+webp-image-cli convert input.jpg -w 800 -h 600
 
 # Convert multiple files with a glob pattern
-webp-cli convert "images/*.jpg"
+webp-image-cli convert "images/*.jpg"
 
 # Output to a different directory
-webp-cli convert "images/*.jpg" -o converted/
+webp-image-cli convert "images/*.jpg" -o converted/
 
 # Force overwriting existing files
-webp-cli convert input.jpg --overwrite
+webp-image-cli convert input.jpg --overwrite
 ```
 
 ## Options
@@ -99,7 +99,7 @@ webp-cli convert input.jpg --overwrite
 ### Convert a single image
 
 ```bash
-webp-cli convert cat.jpg
+webp-image-cli convert cat.jpg
 ```
 
 This will create `cat.webp` in the same directory.
@@ -107,7 +107,7 @@ This will create `cat.webp` in the same directory.
 ### Convert all images in a directory
 
 ```bash
-webp-cli convert photos/
+webp-image-cli convert photos/
 ```
 
 This will convert all image files in the `photos` directory to WebP format and
@@ -116,7 +116,7 @@ save them in the same directory.
 ### Convert all images in a directory and its subdirectories
 
 ```bash
-webp-cli convert photos/ -r
+webp-image-cli convert photos/ -r
 ```
 
 This will recursively find and convert all images in the `photos` directory and
@@ -125,7 +125,7 @@ all of its subdirectories.
 ### Convert multiple images
 
 ```bash
-webp-cli convert "photos/*.jpg" -o webp-photos/
+webp-image-cli convert "photos/*.jpg" -o webp-photos/
 ```
 
 This will convert all JPG files in the `photos` directory and save them to the
@@ -134,7 +134,7 @@ This will convert all JPG files in the `photos` directory and save them to the
 ### Resize images during conversion
 
 ```bash
-webp-cli convert image.png -w 1200
+webp-image-cli convert image.png -w 1200
 ```
 
 This will convert `image.png` to WebP and resize it to 1200px width while

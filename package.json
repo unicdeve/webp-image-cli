@@ -1,6 +1,6 @@
 {
 	"name": "webp-image-cli",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "A CLI to help you convert images to WebP format",
 	"main": "build/index.js",
 	"bin": {
